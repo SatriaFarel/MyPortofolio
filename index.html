@@ -15,10 +15,20 @@
         --dark: #333333;
       }
       * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+      .dark-mode {
+        --primary: #00aaff;
+        --secondary: #1a1a1a;
+        --accent: #005f99;
+        --light: #2c2c2c;
+        --dark: #f5f5f5;
+      }
       body { background:var(--secondary); color:var(--dark); }
       .container { max-width:1200px; margin:0 auto; padding:0 1rem; }
       nav { position:sticky; top:0; background:var(--light); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
       nav h1 span { color:var(--primary); }
+      .logo-container { display:flex; align-items:center; gap:1rem; }
+      .logo { width:50px; height:40px; }
+      .logo-container:hover { transform:scale(1.1); transition:transform 0.3s; }
       .menu { display:flex; gap:1.5rem; }
       .menu a { text-decoration:none; color:var(--dark); font-weight:500; position:relative; }
       .menu a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--primary); transition:width 0.3s; }
@@ -102,7 +112,10 @@
   </head>
   <body>
     <nav>
-      <h1><span>Porto</span>folio</h1>
+      <div class="logo-container">
+        <img class="logo" src="img/Logo SF.png" alt="Logo Satria Farel" />
+        <h1><span>Porto</span>folio</h1>
+      </div>
       <button class="hamburger" aria-label="Tampilkan navigasi"><i class="fas fa-bars"></i></button>
       <div class="menu">
         <a href="#about">Tentang</a>
